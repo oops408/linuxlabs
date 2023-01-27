@@ -1,0 +1,5 @@
+echo "Enter an encryption key (1-25): "
+read key
+
+cat file1 | tr [a-zA-Z] [`echo {a..z} {A..Z} | tr -d ' '`] > file2
+echo "File encrypted."

@@ -1,0 +1,25 @@
+while true; do
+  echo "Enter 4 Numbers:"
+  read num1 num2 num3 num4
+  sum=$((num1+num2+num3+num4))
+  if [ $sum -gt 150 ]; then
+    echo "The sum is more than 150."
+    echo "Numbers: $num1, $num2, $num3, $num4"
+    echo "Sum: $sum"
+  elif [ $sum -ge 100 ] && [ $sum -le 149 ]; then
+    echo "The sum is in the range of 100 to 149."
+    echo "Numbers: $num1, $num2, $num3"
+  elif [ $sum -ge 50 ] && [ $sum -le 99 ]; then
+    echo "The sum is in the range of 50 to 99."
+    echo "Numbers: $num1, $num2"
+  else
+    echo "The sum is not in any expected ranges."
+  fi
+
+  echo "Do you want to try one more time? (Y/N)"
+  read choice
+  if [ "$choice" == "N" ]; then
+    echo "Thank you for entering those values."
+    break
+  fi
+done

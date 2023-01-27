@@ -1,0 +1,12 @@
+while true; do
+  echo "Enter your name:"
+  read name
+  echo "Enter your phone number:"
+  read phonenumber
+  echo "$name, $phonenumber" >> phones
+  echo "Do you want to continue (Y/N)?"
+  read userinput
+  if [ "$userinput" == "N" ]; then
+    break
+  fi
+done

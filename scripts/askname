@@ -1,0 +1,5 @@
+echo "What is your first name?"
+read -r firstname
+echo "What is your last name?"
+read -r lastname
+echo "Welcome $firstname $lastname to CIS 45!"
