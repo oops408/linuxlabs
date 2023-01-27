@@ -1,0 +1,17 @@
+touch odd
+touch even
+
+while true; do
+echo  "Enter a number: "
+read num
+
+if [ $num -eq -1 ]; then
+    break
+  fi
+
+if [ $((num % 2)) -eq 0 ]; then
+    echo $num >> even
+  else
+    echo $num >> odd
+  fi
+done

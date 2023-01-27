@@ -1,0 +1,1 @@
+awk '{sum+=$2; count++} END {print sum/count}' inputfile

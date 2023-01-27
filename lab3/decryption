@@ -1,0 +1,6 @@
+echo "Enter the decryption key (1-25): "
+read key
+
+cat file2 | tr [`echo {a..z} {A..Z} | tr -d ' '`] [a-zA-Z] > decrypted
+echo "File decrypted. Here is the output: "
+cat decrypted

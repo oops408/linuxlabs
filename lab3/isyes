@@ -1,0 +1,7 @@
+read input
+
+if [[ $input =~ ^[Yy][Ee][Ss]$ ]]; then
+  exit 0
+else
+  exit 1
+fi
