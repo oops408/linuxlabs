@@ -1,0 +1,21 @@
+echo "First Name: "
+read firstname
+echo "Last Name: "
+read lastname
+echo "Email: "
+read email
+echo "Cell Phone: "
+read cellphone
+echo "Home Phone: "
+read homephone
+echo "Do you want to add to contacts? (Y/N): "
+read user
+
+if [ $user == "Y" ]; then
+   echo "$firstname $lastname $email $cellphone $homephone" >> contacts
+   echo "Added successfully."
+   ./phone
+else
+   echo "Contact not added."
+   ./phone
+fi

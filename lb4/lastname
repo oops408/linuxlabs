@@ -1,0 +1,5 @@
+echo "Enter last name: "
+read name
+cat contacts | grep -i $name | awk '{print $1, $2, $3, $4, $5}'
+echo "Matching entries printed."
+./phone

@@ -1,0 +1,45 @@
+if [ $# -eq 0 ]; then
+   echo "1- Enter Information"
+   echo "2- Search by Last Name"
+   echo "3- Search by First Name"
+   echo "4- Search by part of last name"
+   echo "5- Display all phone numbers"
+   echo "6- Get the email"
+   echo "7- Exit"
+   echo "Please enter the choice(1-7): "
+   read choice
+   if [ $choice == 1 ]; then
+      ./enterinfo
+   fi
+   if [ $choice == 2 ]; then
+      ./lastname
+   fi
+   if [ $choice == 3 ]; then
+      ./firstname
+   fi
+   if [ $choice == 4 ]; then
+      ./partname
+   fi
+   if [ $choice == 5 ]; then
+      ./displaynumber
+   fi
+   if [ $choice == 6 ]; then
+      ./getemail
+   fi
+   if [ $choice == 7 ]; then
+      break
+   fi
+elif [ $# -eq 1 ]; then
+   cat contacts | grep -i $1 | awk '{print $1, $2, $3, $4, $5}'
+elif [ $# -eq 2 ]; then
+   if [ $1 == d ]; then
+      grep -v "$2" contacts > new
+      mv new contacts
+   elif [ $1 == s ]; then
+      cat contacts | grep -i $2 | awk '{print $1, $2, $3, $4, $5}'
+   else
+      break
+   fi
+else
+   break
+fi

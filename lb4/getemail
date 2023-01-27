@@ -1,0 +1,4 @@
+echo "Enter first name: "
+read name
+cat contacts | grep -i $name | awk '{print $3}'
+./phone

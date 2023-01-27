@@ -1,0 +1,5 @@
+echo "Enter part of the last name: "
+read name
+cat contacts | awk '{if ($2 ~ "'$name'") {print $1, $2, $3, $4, $5}}'
+echo "Matching entries printed."
+./phone
